@@ -1,0 +1,5 @@
+#liberando porta 80
+iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+
+#Regra de redirecionamento de 8080 para 80
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
