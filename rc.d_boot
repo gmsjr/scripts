@@ -1,0 +1,10 @@
+CentOS:
+- Criar script em /etc/init.d/
+- Link simbolico em /etc/rc.d/rc3 e rc5
+ln -s /etc/init.d/script S21script
+
+Debian:
+- Criar script em /etc/init.d/
+-  update-rc.d script defaults
+
+-  update-rc.d -f script remove
