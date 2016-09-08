@@ -1,0 +1,37 @@
+#repositorio puppet 4
+
+yum install http://yum.puppetlabs.com/el/7/PC1/x86_64/puppetlabs-release-pc1-0.9.2-1.el7.noarch.rpm -y
+
+#Remover puppet antigo
+
+yum remove puppet -y
+
+#Editar /etc/hosts
+
+#Remover os SSL antigos e puppet.conf
+
+#Instalar puppet agent
+
+yum install puppet-agent -y
+
+#Corrigir variável path
+
+echo "export PATH=/opt/puppetlabs/bin:$PATH" > /etc/profile.d/puppet_path.sh
+
+source /etc/profile.d/puppet_path.sh
+
+#Corrigir variável locale
+
+echo "export LC_ALL=en_US.UTF-8" > /etc/profile.d/puppet_locale.sh
+
+source /etc/profile.d/puppet_locale.sh
+
+puppet —version
+
+#Start puppet agent
+
+systemctl start puppet
+
+#Assinar certificado no foreman
+
+puppet agent -t
