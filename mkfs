@@ -1,0 +1,12 @@
+  #Formatar unidade de disco
+  sudo mkfs.vfat -n ‘NAME’ -I /dev/sdf1
+  #Formatar para ntfs
+  mkfs.ntfs - para ntfs
+
+Criação de sistemas de arquivos
+
+Após a criação de um dispositivo de bloco, a etapa seguinte é aplicar um formato de sistema de arquivos a ele. Um sistema de arquivos aplica uma estrutura no dispositivo de bloco para que os dados possam ser armazenados e recuperados. O Red Hat Enterprise Linux suporta vários tipos de sistema de arquivos, e dois tipos comuns são xfs e ext4 . xfs é usado por padrão no anaconda , o instalador do Red Hat Enterprise Linux.
+
+O comando mkfs pode ser usado para aplicar um sistema de arquivos a um dispositivo de bloco. Se nenhum tipo for especificado, um sistema de arquivos tipo dois estendido (ext2) será usado, o que para muitos usos não é aconselhável. Para especificar o tipo de sistema de arquivos, um -t deve ser usado.
+
+[root@serverX ~]# mkfs -t xfs /dev/vdb1
