@@ -1,0 +1,3 @@
+#Script para add usuarios with bash
+
+useradd -d /home/usuario -m -s /bin/bash -G adm usuario
