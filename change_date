@@ -1,0 +1,16 @@
+Para alterar data e hora no GNU/Linux, basta digitar o comando abaixo com seus respectivos valores: 
+
+# date mmddhhmmyyyy 
+
+O significado de cada conjunto de caracteres é:
+mm: mês
+dd: dia
+hh: hora
+mm: minuto
+yyyy: ano
+
+Depois de digitado o comando com os respectivos valores, digite isso para salvar as alterações: 
+
+# clock -w 
+
+Obs.: Algumas distros nem precisam mais desse comando. 
