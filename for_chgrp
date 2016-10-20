@@ -1,0 +1,7 @@
+#!/bin/bash
+while true; do
+    for user in $(ls /sigef); do
+        chgrp sigef /sigef/${user}/
+    done
+    sleep 10
+done
