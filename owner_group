@@ -1,0 +1,8 @@
+#!/bin/bash
+for i in $(ls -R /path | grep -E '^/' | tr -d ':'); do 
+  echo "==============================="
+  echo caminho: $i
+  chown user:user $i/*
+  sleep 2m
+  echo "==============Feito============"
+done
