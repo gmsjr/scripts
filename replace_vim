@@ -1,0 +1,2 @@
+# Todas as palavras windows são substituídas por linux.
+:%s/windows/linux/g 
