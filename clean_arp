@@ -1,0 +1,5 @@
+#Limpar tabela arp, para problemas com Centos 6.5
+
+ip -s -s neigh flush all
+
+#Após, proceder com a reconfiguração da interface de rede
