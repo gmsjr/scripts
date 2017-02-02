@@ -1,0 +1,28 @@
+#Crie o diretorio necessario
+mkdir -p /etc/nginx/certs/2017
+
+#Acesse o diretório:
+cd /etc/nginx/certs/2017/
+
+#Copie a Raiz CA_serpro_2014.cer;
+cp /etc/nginx/certs/2016/CA_serpro_2014.cer CA_serpro_2017.cer
+
+#Baixe a Certificado da AC Raiz da ICP-Brasil v5
+wget --no-check-certificate http://acraiz.icpbrasil.gov.br/credenciadas/RAIZ/ICPBrasilv5.crt
+
+#Concatenando as Chaves
+cat ICP-Brasilv5.crt >> CA_serpro_2017.cer
+
+#Editar o arquivo “nome_da_aplicacao”
+vim /etc/nginx/sites-enabled/nome_da_aplicacao
+
+#Editar o arquivo /etc/nginx/sites-enabled/nome_da_aplicacao
+#adicione o bloco abaixo:
+ #2017
+ ssl_certificate /etc/nginx/certs/2016/sigef_2016.cer;
+ ssl_certificate_key /etc/nginx/certs/2016/sigef_2016.key;
+ ssl_client_certificate /etc/nginx/certs/2017/CA_serpro_2017.cer;
+ ssl_verify_client optional;
+ ssl_verify_depth 10;
+ 
+ #Restart nginx
