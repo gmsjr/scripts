@@ -8,3 +8,4 @@ ssh-keygen -t rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub login@servidor
 
 #Apos a importação da chave pulica no servidor, proceder com a primeira autenticação do cliente no servidor remoto, afim de validar a autenticação
+# A chave publica(id_rsa.pub) sempre deverá ser alocada no servidor a ser acessado, enquanto a id_rsa permanece no servidor cliente, pois é uma chave privada.
