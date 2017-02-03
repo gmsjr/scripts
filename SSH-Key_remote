@@ -1,0 +1,10 @@
+#Create ssh keys on client user
+
+ssh-keygen -t rsa
+##Definir senha para a chave id_rsa e id_rsa.pub criada.
+
+#Apos a criação do par de chaves, proceder com o copia da chave publica para o servidor a ser acessado via SSH
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub login@servidor
+
+#Apos a importação da chave pulica no servidor, proceder com a primeira autenticação do cliente no servidor remoto, afim de validar a autenticação
