@@ -35,3 +35,14 @@ systemctl start puppet
 #Assinar certificado no foreman
 
 puppet agent -t
+
+
+
+
+
+
+###########DEBIAN################
+
+cd ~ && wget https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
+
+sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
