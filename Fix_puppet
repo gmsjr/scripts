@@ -1,0 +1,5 @@
+
+Add to /etc/puppetlabs/puppetserver/conf.d/web-routes.conf: 
+
+"puppetlabs.trapperkeeper.services.status.status-service/status-service": 
+"/status" 
