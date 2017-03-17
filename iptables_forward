@@ -13,3 +13,4 @@ vim /etc/iptables/rules.v4
 ##SALVAR REGRAS CENTOS
 yum install iptables-services
 service iptables save
+chkconfig iptables on
