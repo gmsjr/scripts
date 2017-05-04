@@ -1,0 +1,1 @@
+ldapsearch -h 172.20.20.1 -p 389 -b "DC=incra,DC=local" -D "CN=OTRS_User,OU=ContasServico,OU=SEDE,OU=INCRA,DC=incra,DC=local" -w 123456
