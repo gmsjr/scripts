@@ -4,3 +4,4 @@ Criar PV - pvcreate /dev/volume
 expandir o VG onde esta o LV que sera aumentado vgextend VG_EXISTENTE /dev/volume
 lvextend -L 200G /dev/mapper/centos-root
 xfs_growfs /dev/mapper/centos-root
+done
